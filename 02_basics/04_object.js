@@ -23,6 +23,21 @@ const obj2 = {3: "c" , 4: "d"}
 const obj3 = {...obj1 , ...obj2};   // same as array spread concept
 // console.log(obj3);
 
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+
+const course = {
+    coursename: "jsLear",
+    price: "100",
+    instructor: "Rahul"
+}
+// course.instructor
+// anotehr way of accesing value of object
+
+const {instructor} = course
+const {instructor: inst} = course   // we can also giev it short name and use it
+console.log(instructor);
+// and this called object destructuring
+
+ 
