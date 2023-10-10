@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me yaha aaya hu sirf dom seekhne</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+
+    <ul class="language">
+        <li>Javascript</li>
+        <li>C++</li>
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(langName){
+        const newItem = document.createElement('li');
+        newItem.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(newItem);
+    }
+    addLanguage("java");
+    addLanguage("python");
+    // optimize way to add language
+    function addLanguage2(langName){
+        const newItem = document.createElement('li')
+        newItem.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(newItem)
+    }
+    addLanguage2("Typescript")
+
+    // edit
+    const lang2 = document.querySelector("li:nth-child(2)")
+    const newLi = document.createElement('li')
+    newLi.textContent = "Gojo"
+    lang2.replaceWith(newLi);
+    
+    // remove
+    const lastlang = document.querySelector('li:nth-child(5)')
+    lastlang.remove();
+</script>
+</html>
