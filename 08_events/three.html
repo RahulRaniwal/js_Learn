@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121; color: aliceblue">
+
+    <h1>Rahul Only</h1>
+    <button id = "start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    const syaDate = function(str){
+        console.log(str, Date.now());
+    }
+    const intervalId = setInterval(syaDate , 2000 , "Rahul");
+
+    // start the printing by using button
+    document.querySelector('#start').addEventListener('click', function(){
+        intervalId
+    })
+    // stop the printing by stop button
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(intervalId)
+        console.log("Tham ja bawle");
+    })
+
+
+</script>
+
+</html>

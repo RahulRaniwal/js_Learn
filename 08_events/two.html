@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121; color: aliceblue">
+
+    <h1>Rahul Raniwal</h1>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+
+    setTimeout(function () {
+        console.log("Rahul Raniwal");
+    }, 2000)
+    // we can also create function seperatley and give reference of the funcn in the set timeout function
+
+    const changeText = () => {
+        document.querySelector('h1').innerHTML = "Jordi"
+    }
+
+    const timeout1 = setTimeout(changeText, 3000);
+
+    // we can also stop settimeto be executed by using cleartime out
+    // clearTimeout(timeout1)
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearTimeout(timeout1);
+        console.log("Job done");
+    })
+
+
+    setInterval()
+</script>
+
+</html>
